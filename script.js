@@ -17,12 +17,15 @@
                 // Color change logic
                 if (level <= 20) {
                     batteryLevel.style.backgroundColor = "red";
-                } else if (level <= 50) {
+                } else if(level <= 50) {
                     batteryLevel.style.backgroundColor = "orange";
                 } else {
                     batteryLevel.style.backgroundColor = "green";
                 }
-                if(battery.charging) {
+                if(level === 100) {
+                 batteryInfo.textContent = "✅ Your device is fully charged!";
+                }
+                else if(battery.charging) {
                  batteryInfo.textContent = "🔌 Device is charging";
                 }else{
                  batteryInfo.textContent = "🔋 This shows your device's current battery level";
