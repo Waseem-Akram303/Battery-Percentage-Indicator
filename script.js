@@ -33,7 +33,8 @@
             updateBattery();
 
             // Jab battery change ho
-            battery.addEventListener("eventname", updateBattery);
+            battery.addEventListener("levelchange", updateBattery);
+            battery.addEventListener("chargingchange", updateBattery);
         });
     } else {
         batteryText.textContent = "Battery API not supported";
